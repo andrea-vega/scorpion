@@ -1,0 +1,6 @@
+{
+    "db": "mongodb://localhost/mean-dev",
+    "app": {
+        "name": "Informer 5 - Entrinsik Informer - Development"
+    }
+}
