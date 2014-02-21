@@ -29,10 +29,16 @@ exports.list = function(req, res) {
     });
 };
 
+exports.lookup = function(req, res) {
+    db.readNode(req.params.id, function(err, node) {
+        res.send(toHal(node));
+    });
+};
+
 exports.save = function(req, res) {
     var datasource = req.body;
 
     db.insertNode(datasource, 'Datasource', function (err, node) {
-        res.send(node);
+        res.send(toHal(node));
     });
 };
